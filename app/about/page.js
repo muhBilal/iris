@@ -6,7 +6,7 @@ export default function faq() {
             <section className={`relative min-h-[40rem]`}>
                 <div className={`absolute top-0 left-0 w-full h-[35rem] z-10 bg-blue-900 opacity-60`}></div>
                 <div className={`absolute top-0 left-0 w-full h-[35rem] z-20 flex items-center justify-center`}>
-                    <div className={`flex items-center justify-between w-full max-w-5xl text-center`}>
+                    <div className={`flex items-center justify-between w-full max-w-5xl text-center px-4 md:px-0`}>
                         <h1 className={`text-4xl text-white font-bold`}>About</h1>
                         <nav className="flex" aria-label="Breadcrumb">
                             <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -49,12 +49,12 @@ export default function faq() {
                 </div>
             </section>
 
-            <section className={`container mt-10`}>
-                <div className={`flex items-center gap-10`}>
-                    <div className={`w-1/2`}>
+            <section className={`container mt-10 px-4 md:px-0`}>
+                <div className={`flex flex-col md:flex-row items-center gap-10`}>
+                    <div className={`w-full md:w-1/2`}>
                         <img src="/assets/images/about.jpg" alt=""/>
                     </div>
-                    <div className={`w-1/2 text-start font-poppins`}>
+                    <div className={`w-full md:w-1/2 text-start font-poppins`}>
                         <h5 className={`uppercase text-orange text-md font-bold`}>
                             Tentang Iris
                         </h5>
@@ -87,7 +87,7 @@ export default function faq() {
                 </div>
 
                 {/*card*/}
-                <div className={`flex flex-wrap justify-center mt-10 gap-10`}>
+                <div className={`flex flex-wrap justify-center mt-10 gap-3 md:gap-10`}>
                     <div className={`flex flex-col justify-center items-center mt-24`}>
                         <div className={`group relative w-[20rem] h-[20rem]`}>
                             <div
