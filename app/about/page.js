@@ -1,6 +1,11 @@
+'use client';
 import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
+import {useEffect} from "react";
 
 export default function faq() {
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <main className={``}>
             <section className={`relative min-h-[40rem]`}>
@@ -51,10 +56,10 @@ export default function faq() {
 
             <section className={`container mt-10 px-4 md:px-0`}>
                 <div className={`flex flex-col md:flex-row items-center gap-10`}>
-                    <div className={`w-full md:w-1/2`}>
+                    <div className={`w-full md:w-1/2`} data-aos="fade-right">
                         <img src="/assets/images/about.jpg" alt=""/>
                     </div>
-                    <div className={`w-full md:w-1/2 text-start font-poppins`}>
+                    <div className={`w-full md:w-1/2 text-start font-poppins`} data-aos="fade-left">
                         <h5 className={`uppercase text-orange text-md font-bold`}>
                             Tentang Iris
                         </h5>
@@ -75,7 +80,7 @@ export default function faq() {
                 </div>
             </section>
 
-            <section className={`mt-36`}>
+            <section className={`mt-36`} data-aos="zoom-in">
                 <div className={` font-poppins text-center max-w-2xl mx-auto`}>
                     <h5 className={`uppercase text-orange text-md`}>
                         di balik layar?

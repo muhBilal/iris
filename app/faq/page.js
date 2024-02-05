@@ -1,6 +1,10 @@
-import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa";
+'use client';
+import {useEffect} from "react";
 
 export default function faq(){
+    useEffect(() => {
+        AOS.init();
+    }, []);
   return (
       <main className={``}>
           <section className={`relative min-h-[40rem]`}>
@@ -49,7 +53,7 @@ export default function faq(){
               </div>
           </section>
 
-          <section className={`container px-4 md:px-0`} >
+          <section className={`container px-4 md:px-0`}  data-aos="zoom-in">
               <div className={` font-poppins text-center max-w-2xl mx-auto`}>
                   <h5 className={`uppercase text-orange text-md`}>
                       Apa pertanyaan orang?

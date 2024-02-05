@@ -5,6 +5,7 @@ import ButtonOutline from "@/app/components/button/buttonOutline";
 import {FaBuilding, FaEnvelopeOpen, FaListNumbered} from "react-icons/fa";
 import {FaLightbulb, FaListOl, FaCertificate, FaHeart, FaBook} from 'react-icons/fa';
 import {IoMdPeople} from "react-icons/io";
+import {useEffect} from "react";
 
 
 export default function Home() {
@@ -36,6 +37,9 @@ export default function Home() {
         }
     ];
 
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <main className={`pb-32`}>
             <section className={`relative h-screen`}>
@@ -80,7 +84,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className={`mt-36 px-4 md:px-0`}>
+            <section className={`mt-36 px-4 md:px-0`} data-aos="zoom-in">
                 <div className={` font-poppins text-center max-w-2xl mx-auto`}>
                     <h5 className={`uppercase text-orange text-xl`}>
                         Filosofi Iris
@@ -201,11 +205,11 @@ export default function Home() {
 
             <section className={`container mt-36 px-4 md:px-0`}>
                 <div className={`flex flex-col items-center gap-16 md:flex-row justify-between`}>
-                    <div className={`w-full md:w-1/2`}>
+                    <div className={`w-full md:w-1/2`}  data-aos="fade-right">
                         <img src="/assets/images/visualisasi-1.jpg"
                              className="rounded-tr-0 rounded-br-0 md:rounded-tr-[6rem] md:rounded-br-[6rem] h-[30rem]"/>
                     </div>
-                    <div className={`w-full md:w-1/2 max-w-2xl flex items-center flex-col h-full`}>
+                    <div className={`w-full md:w-1/2 max-w-2xl flex items-center flex-col h-full`} data-aos="fade-left">
                         <h1 className={`font-poppins font-semibold text-3xl`}>Asah Otak, pelopor transformasi pendidikan
                             di Indonesia! </h1>
                         <p className={`font-rubik text-gray-00 mt-10 max-w-2xl `}>
@@ -222,10 +226,10 @@ export default function Home() {
 
             <section className={`container mt-36 px-4 md:px-0`}>
                 <div className={`flex flex-col items-center gap-16 md:flex-row-reverse justify-between`}>
-                    <div className={`w-full md:w-1/2 `}>
+                    <div className={`w-full md:w-1/2 `} data-aos="fade-right">
                         <img src="/assets/images/misi.jpg" className="h-[30rem]"/>
                     </div>
-                    <div className={`w-full md:w-1/2  h-full`}>
+                    <div className={`w-full md:w-1/2  h-full`} data-aos="fade-left">
                         <h1 className={`font-poppins font-semibold text-3xl text-start`}>Misi Iris Future </h1>
                         <div className={`font-rubik mt-10 flex flex-col gap-5`}>
                             <div className={`flex items-center gap-10`}>
@@ -272,7 +276,7 @@ export default function Home() {
             </section>
 
             {/*testimonial*/}
-            <section className={`mt-36`}>
+            <section className={`mt-36`} data-aos="zoom-out">
                 <div className={` font-poppins text-center max-w-2xl mx-auto`}>
                     <h5 className={`uppercase text-orange text-xl`}>
                         Apa Kata Mereka?
