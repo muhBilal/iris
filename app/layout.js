@@ -25,6 +25,9 @@ export default function RootLayout({children}) {
             {/*script*/}
             <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+            {/*aos*/}
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         </head>
         <body className={`${inter.className}`}>
         <Navbar/>

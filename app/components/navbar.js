@@ -31,7 +31,7 @@ const Navbar = () => {
     }, []);
     return (
         <section className="antialiased py-5 px-3 md:px-32 fixed w-full mb-20 z-50">
-            <div className={`w-full rounded-md ${visible ? 'shadow-md bg-white text-white md:text-black' : 'text-white'}`}>
+            <div className={`w-full rounded-md ${visible ? 'shadow-md bg-white text-white md:text-black' : 'text-black md:text-white'}`}>
                 <div
                     className="py-2 rounded-md flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 bg-gray-900 md:bg-transparent ">
                     <div className="flex flex-row items-center justify-between p-4">
