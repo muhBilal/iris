@@ -46,7 +46,7 @@ export default function Home() {
                      }}
                 ></div>
                 <div className={`absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center`}>
-                    <div className={`flex flex-col items-center max-w-2xl text-center`}>
+                    <div className={`flex flex-col items-center max-w-2xl text-center px-4 md:px-0`}>
                         <h1 className={`text-4xl font-bold text-white font-poppins`}>Mulai Perjalanan Menuju Kesuksesan
                             dengan
                             AsahOtak.</h1>
@@ -80,7 +80,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className={`mt-36`}>
+            <section className={`mt-36 px-4 md:px-0`}>
                 <div className={` font-poppins text-center max-w-2xl mx-auto`}>
                     <h5 className={`uppercase text-orange text-xl`}>
                         Filosofi Iris
@@ -199,13 +199,13 @@ export default function Home() {
 
             </section>
 
-            <section className={`container mt-36`}>
+            <section className={`container mt-36 px-4 md:px-0`}>
                 <div className={`flex flex-col items-center gap-16 md:flex-row justify-between`}>
-                    <div className={`w-1/2`}>
+                    <div className={`w-full md:w-1/2`}>
                         <img src="/assets/images/visualisasi-1.jpg"
-                             className="rounded-tr-[6rem] rounded-br-[6rem] h-[30rem]"/>
+                             className="rounded-tr-0 rounded-br-0 md:rounded-tr-[6rem] md:rounded-br-[6rem] h-[30rem]"/>
                     </div>
-                    <div className={`w-1/2 max-w-2xl flex items-center flex-col h-full`}>
+                    <div className={`w-full md:w-1/2 max-w-2xl flex items-center flex-col h-full`}>
                         <h1 className={`font-poppins font-semibold text-3xl`}>Asah Otak, pelopor transformasi pendidikan
                             di Indonesia! </h1>
                         <p className={`font-rubik text-gray-00 mt-10 max-w-2xl `}>
@@ -220,12 +220,12 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className={`container mt-36`}>
+            <section className={`container mt-36 px-4 md:px-0`}>
                 <div className={`flex flex-col items-center gap-16 md:flex-row-reverse justify-between`}>
-                    <div className={`w-1/2`}>
+                    <div className={`w-full md:w-1/2 `}>
                         <img src="/assets/images/misi.jpg" className="h-[30rem]"/>
                     </div>
-                    <div className={`w-1/2 h-full`}>
+                    <div className={`w-full md:w-1/2  h-full`}>
                         <h1 className={`font-poppins font-semibold text-3xl text-start`}>Misi Iris Future </h1>
                         <div className={`font-rubik mt-10 flex flex-col gap-5`}>
                             <div className={`flex items-center gap-10`}>
@@ -267,10 +267,6 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-
-                        {/*<div className={`mt-10 flex items-start justify-start w-full`}>*/}
-                        {/*    <ButtonPrimary text="Mulai Belajar"  />*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </section>

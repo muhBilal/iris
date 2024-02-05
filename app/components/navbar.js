@@ -30,10 +30,10 @@ const Navbar = () => {
 
     }, []);
     return (
-        <section className="antialiased py-5 px-32 fixed w-full mb-20 z-50">
+        <section className="antialiased py-5 px-3 md:px-32 fixed w-full mb-20 z-50">
             <div className={`w-full rounded-md ${visible ? 'shadow-md bg-white text-black' : 'text-white'}`}>
                 <div
-                    className="py-2 rounded-md flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                    className="py-2 rounded-md flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 bg-gray-900 md:bg-transparent ">
                     <div className="flex flex-row items-center justify-between p-4">
                         <a href="#"
                            className={`flex gap-5 items-center text-lg font-semibold tracking-widest uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline ${visible ? 'text-gray-900' : 'text-white'}`}>
