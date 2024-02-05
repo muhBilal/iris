@@ -50,7 +50,7 @@ export default function Home() {
                      }}
                 ></div>
                 <div className={`absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center`}>
-                    <div className={`flex flex-col items-center max-w-2xl text-center px-4 md:px-0`}>
+                    <div className={`flex flex-col items-center max-w-2xl text-center px-4 md:px-0`} data-aos="zoom-out">
                         <h1 className={`text-4xl font-bold text-white font-poppins`}>Mulai Perjalanan Menuju Kesuksesan
                             dengan
                             AsahOtak.</h1>
