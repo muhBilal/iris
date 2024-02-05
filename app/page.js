@@ -1,113 +1,326 @@
-import Image from "next/image";
+'use client';
+
+import ButtonPrimary from "@/app/components/button/buttonPrimary";
+import ButtonOutline from "@/app/components/button/buttonOutline";
+import {FaBuilding, FaEnvelopeOpen, FaListNumbered} from "react-icons/fa";
+import {FaLightbulb, FaListOl, FaCertificate, FaHeart, FaBook} from 'react-icons/fa';
+import {IoMdPeople} from "react-icons/io";
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    const companyValues = [
+        {
+            title: "Inovasi",
+            desc: "Mengadopsi pendekatan kreatif dan solusi inovatif untuk merespons kebutuhan pendidikan yang berkembang.",
+            icon: <FaLightbulb/>
+        },
+        {
+            title: "Keterbukaan",
+            desc: "Menciptakan lingkungan yang inklusif, menerima berbagai perspektif, dan mempromosikan keberagaman.",
+            icon: <FaLightbulb/>
+        },
+        {
+            title: "Integritas",
+            desc: "Berkomitmen pada kejujuran, etika, dan transparansi dalam setiap aspek bisnis dan interaksi.",
+            icon: <FaLightbulb/>
+        },
+        {
+            title: "Kepedulian",
+            desc: "Memahami dan meresapi kebutuhan masyarakat serta berkontribusi pada kesejahteraan melalui proyek sosial.",
+            icon: <FaLightbulb/>
+        },
+        {
+            title: "Pendidikan Berkualitas",
+            desc: "Meneguhkan komitmen terhadap penyediaan layanan pendidikan terbaik dan pemahaman yang mendalam.",
+            icon: <FaLightbulb/>
+        }
+    ];
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    return (
+        <main className={`pb-32`}>
+            <section className={`relative h-screen`}>
+                <div className={`absolute top-0 left-0 w-full h-full z-10 bg-blue-900 opacity-60`}
+                     style={{
+                         borderBottomLeftRadius: '83rem 10rem',
+                         borderBottomRightRadius: '83rem 10rem',
+                     }}
+                ></div>
+                <div className={`absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center`}>
+                    <div className={`flex flex-col items-center max-w-2xl text-center`}>
+                        <h1 className={`text-4xl font-bold text-white font-poppins`}>Mulai Perjalanan Menuju Kesuksesan
+                            dengan
+                            AsahOtak.</h1>
+                        <p className={`text-xl text-white mt-5 font-rubik`}>Jelajahi Masa Depan Pendidikan dengan
+                            AsahOtak. Setiap langkah merupakan jalan menuju kesuksesan yang lebih besar.</p>
+                        <div className={`flex gap-3 mt-5`}>
+                            <ButtonPrimary text="Mulai"/>
+                            <ButtonOutline text="Hubungi Kami"/>
+                        </div>
+                    </div>
+                </div>
+                <div className={`absolute top-0 left-0 w-[49.6vw] h-full flex z-0`}>
+                    <img
+                        src="/assets/images/01.jpg"
+                        alt=""
+                        className={`object-cover h-full`}
+                        style={{
+                            width: '50vw',
+                            borderBottomLeftRadius: '83rem 10rem',
+                        }}
+                    />
+                    <img
+                        src="/assets/images/03.jpg"
+                        alt=""
+                        className={`object-cover h-full`}
+                        style={{
+                            width: '50vw',
+                            borderBottomRightRadius: '83rem 10rem',
+                        }}
+                    />
+                </div>
+            </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <section className={`mt-36`}>
+                <div className={` font-poppins text-center max-w-2xl mx-auto`}>
+                    <h5 className={`uppercase text-orange text-xl`}>
+                        Filosofi Iris
+                    </h5>
+                    <h1 className={`mt-3 font-bold text-3xl`}>Membangun Masa Depan yang Lebih Baik</h1>
+                    <p className={`font-rubik mt-5 text-gray-500`}>
+                        Iris Future merupakan platform pendidikan yang bertujuan untuk membantu siswa dalam
+                        mengembangkan potensi diri dan menemukan minatnya di bidang pendidikan.
+                    </p>
+                </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                {/*card*/}
+                <div>
+                    <div
+                        className={`flex flex-wrap gap-5 max-w-5xl justify-center mx-auto mt-10`}>
+                        {companyValues.map((value, index) => (
+                            <div key={index}
+                                 className="group max-w-xs py-10 px-16 text-center bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700
+                                 hover:shadow-xl">
+                                {/*<div dangerouslySetInnerHTML={{__html: value.icon}}/>*/}
+                                <div className={``}>
+                                    <FaLightbulb size={100} className={`mx-auto text-orange bg-gray-100 rounded-full p-5
+                                    group-hover:text-white group-hover:bg-orange transition-all duration-700`}/>
+                                </div>
+                                <a href="#">
+                                    <h5 className="mb-5 mt-10 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                                        {value.title}
+                                    </h5>
+                                </a>
+                                <p className="mb-5 font-normal text-gray-500 dark:text-gray-400">
+                                    {value.desc}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                {/*manual*/}
+                {/*<div className="flex flex-wrap justify-center">*/}
+                {/*    /!* Card 1 *!/*/}
+                {/*    <div*/}
+                {/*        className="max-w-xs py-10 px-16 text-center bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl">*/}
+                {/*        /!*<div><FaLightbulb/></div>*!/*/}
+                {/*        <a href="#">*/}
+                {/*            <h5 className="mb-5 mt-10 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">*/}
+                {/*                Inovasi*/}
+                {/*            </h5>*/}
+                {/*        </a>*/}
+                {/*        <p className="mb-5 font-normal text-gray-500 dark:text-gray-400">*/}
+                {/*            Mengadopsi pendekatan kreatif dan solusi inovatif untuk merespons kebutuhan pendidikan yang*/}
+                {/*            berkembang.*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+
+                {/*    /!* Card 2 *!/*/}
+                {/*    <div*/}
+                {/*        className="max-w-xs py-10 px-16 text-center bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl">*/}
+                {/*        /!*<div><FaListNumbered/></div>*!/*/}
+                {/*        <a href="#">*/}
+                {/*            <h5 className="mb-5 mt-10 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">*/}
+                {/*                Keterbukaan*/}
+                {/*            </h5>*/}
+                {/*        </a>*/}
+                {/*        <p className="mb-5 font-normal text-gray-500 dark:text-gray-400">*/}
+                {/*            Menciptakan lingkungan yang inklusif, menerima berbagai perspektif, dan mempromosikan*/}
+                {/*            keberagaman.*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+
+                {/*    /!* Card 3 *!/*/}
+                {/*    <div*/}
+                {/*        className="max-w-xs py-10 px-16 text-center bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl">*/}
+                {/*        /!*<div><FaCertificate/></div>*!/*/}
+                {/*        <a href="#">*/}
+                {/*            <h5 className="mb-5 mt-10 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">*/}
+                {/*                Integritas*/}
+                {/*            </h5>*/}
+                {/*        </a>*/}
+                {/*        <p className="mb-5 font-normal text-gray-500 dark:text-gray-400">*/}
+                {/*            Berkomitmen pada kejujuran, etika, dan transparansi dalam setiap aspek bisnis dan interaksi.*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+
+                {/*    /!* Card 4 *!/*/}
+                {/*    <div*/}
+                {/*        className="max-w-xs py-10 px-16 text-center bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl">*/}
+                {/*        /!*<div><FaHeart/></div>*!/*/}
+                {/*        <a href="#">*/}
+                {/*            <h5 className="mb-5 mt-10 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">*/}
+                {/*                Kepedulian*/}
+                {/*            </h5>*/}
+                {/*        </a>*/}
+                {/*        <p className="mb-5 font-normal text-gray-500 dark:text-gray-400">*/}
+                {/*            Memahami dan meresapi kebutuhan masyarakat serta berkontribusi pada kesejahteraan melalui*/}
+                {/*            proyek sosial.*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+
+                {/*    /!* Card 5 *!/*/}
+                {/*    <div*/}
+                {/*        className="max-w-xs py-10 px-16 text-center bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl">*/}
+                {/*        /!*<div><FaBook/></div>*!/*/}
+                {/*        <a href="#">*/}
+                {/*            <h5 className="mb-5 mt-10 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">*/}
+                {/*                Pendidikan Berkualitas*/}
+                {/*            </h5>*/}
+                {/*        </a>*/}
+                {/*        <p className="mb-5 font-normal text-gray-500 dark:text-gray-400">*/}
+                {/*            Meneguhkan komitmen terhadap penyediaan layanan pendidikan terbaik dan pemahaman yang*/}
+                {/*            mendalam.*/}
+                {/*        </p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
+
+            </section>
+
+            <section className={`container mt-36`}>
+                <div className={`flex flex-col items-center gap-16 md:flex-row justify-between`}>
+                    <div className={`w-1/2`}>
+                        <img src="/assets/images/visualisasi-1.jpg"
+                             className="rounded-tr-[6rem] rounded-br-[6rem] h-[30rem]"/>
+                    </div>
+                    <div className={`w-1/2 max-w-2xl flex items-center flex-col h-full`}>
+                        <h1 className={`font-poppins font-semibold text-3xl`}>Asah Otak, pelopor transformasi pendidikan
+                            di Indonesia! </h1>
+                        <p className={`font-rubik text-gray-00 mt-10 max-w-2xl `}>
+                            Siapkan dirimu untuk sukses dalam ujian UTBK-SNBT dengan AsahOtak, platform bimbingan
+                            belajar online terbaik. Dengan kurikulum berkualitas tinggi dan tutor berpengalaman, kami
+                            membantu siswa meraih kesuksesan akademis. Ayo, wujudkan impianmu bersama AsahOtak!
+                        </p>
+                        <div className={`mt-10 flex items-start justify-start w-full`}>
+                            <ButtonPrimary text="Mulai Belajar"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={`container mt-36`}>
+                <div className={`flex flex-col items-center gap-16 md:flex-row-reverse justify-between`}>
+                    <div className={`w-1/2`}>
+                        <img src="/assets/images/misi.jpg" className="h-[30rem]"/>
+                    </div>
+                    <div className={`w-1/2 h-full`}>
+                        <h1 className={`font-poppins font-semibold text-3xl text-start`}>Misi Iris Future </h1>
+                        <div className={`font-rubik mt-10 flex flex-col gap-5`}>
+                            <div className={`flex items-center gap-10`}>
+                                <div className={`bg-purple-200 rounded-full p-6`}>
+                                    <FaBook className={`font-orange bg-purple-200 text-3xl`}/>
+                                </div>
+                                <div>
+                                    <h1 className={`font-semibold text-xl`}>Pendidikan Berkualitas tinggi</h1>
+                                    <p className={`text-gray-700 mt-4`}>
+                                        Memberikan akses pendidikan berkualitas tinggi melalui platform online,
+                                        AsahOtak,
+                                        untuk membantu siswa meraih kesuksesan dalam ujian UTBK-SNBT.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={`flex items-center gap-10`}>
+                                <div className={`bg-purple-200 rounded-full p-6`}>
+                                    <IoMdPeople className={`font-orange bg-purple-200 text-3xl`}/>
+                                </div>
+                                <div>
+                                    <h1 className={`font-semibold text-xl capitalize`}>Menginspirasi generasi muda</h1>
+                                    <p className={`text-gray-700 mt-4`}>
+                                        Menginspirasi dan memberdayakan siswa melalui IRIS Scholarship, memberikan peluang beasiswa bagi mereka yang berpotensi.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={`flex items-center gap-10`}>
+                                <div className={`bg-purple-200 rounded-full p-6`}>
+                                    <FaBuilding className={`font-orange bg-purple-200 text-3xl`}/>
+                                </div>
+                                <div>
+                                    <h1 className={`font-semibold text-xl`}>Pendidikan Berkualitas tinggi</h1>
+                                    <p className={`text-gray-700 mt-4`}>
+                                        Menginspirasi dan memberdayakan siswa melalui IRIS Scholarship, memberikan
+                                        peluang
+                                        beasiswa
+                                        bagi mereka yang berpotensi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/*<div className={`mt-10 flex items-start justify-start w-full`}>*/}
+                        {/*    <ButtonPrimary text="Mulai Belajar"  />*/}
+                        {/*</div>*/}
+                    </div>
+                </div>
+            </section>
+
+            {/*testimonial*/}
+            <section className={`mt-36`}>
+                <div className={` font-poppins text-center max-w-2xl mx-auto`}>
+                    <h5 className={`uppercase text-orange text-xl`}>
+                        Apa Kata Mereka?
+                    </h5>
+                    <h1 className={`mt-7 font-bold text-5xl uppercase`}>
+                        Ulasan Kami
+                    </h1>
+                    <div className={`border-b-2 border-orange w-32 mx-auto mt-10`}></div>
+                </div>
+
+                {/*card*/}
+                <div className={`flex flex-wrap justify-center mt-24 gap-10`}>
+                    <div>
+                        <div className={`bg-blue-50 p-5 max-w-96`}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, maiores!
+                        </div>
+                        <div className={`flex flex-col justify-center items-center mt-24 w-full`}>
+                            <img src="/assets/images/user01.jpg" alt="" className={`w-[5rem] h-[5rem] rounded-full `}/>
+                            <h1 className={`text-orange`}>Alex</h1>
+                            <p>Mahasiswa</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={`bg-blue-50 p-5 max-w-96`}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, maiores!
+                        </div>
+                        <div className={`flex flex-col justify-center items-center mt-24 w-full`}>
+                            <img src="/assets/images/user01.jpg" alt="" className={`w-[5rem] h-[5rem] rounded-full `}/>
+                            <h1 className={`text-orange`}>Alex</h1>
+                            <p>Mahasiswa</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={`bg-blue-50 p-5 max-w-96`}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, maiores!
+                        </div>
+                        <div className={`flex flex-col justify-center items-center mt-24 w-full`}>
+                            <img src="/assets/images/user01.jpg" alt="" className={`w-[5rem] h-[5rem] rounded-full `}/>
+                            <h1 className={`text-orange`}>Alex</h1>
+                            <p>Mahasiswa</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
 }
